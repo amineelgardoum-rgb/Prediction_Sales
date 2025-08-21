@@ -1,7 +1,3 @@
-
-
-
-
 ## Car Sales Prediction Analysis
 
 This project aims to predict the number of car units sold based on key economic factors such as vehicle prices, inflation, and interest rates. The analysis uses historical data to build a predictive model, offering insights into the market dynamics of the automotive industry. The entire process, from data exploration to model evaluation, is detailed in the `Project_prediction.ipynb` Jupyter Notebook.
@@ -10,9 +6,7 @@ This project aims to predict the number of car units sold based on key economic 
 
 ## 🖼️ Project Visualization
 
-*(This is the perfect place to showcase a key visual from your analysis, such as a time-series plot of actual vs. predicted sales, a feature importance chart, or a correlation matrix.)*
-
-![Actual vs. Predicted Car Sales](./sales_prediction_chart.png)
+![Actual vs. Predicted Car Sales](output.png)
 
 ---
 
@@ -85,8 +79,8 @@ Ensure you have Python and Jupyter Notebook installed.
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/your-repository-name.git
-   cd your-repository-name
+   git clone https://github.com/amineelgardoum-rgb/Prediction_Sales.git
+   cd Prediction_Sales
    ```
 2. **Install the required Python libraries:**
    This project relies on several common data science libraries. You can install them using `pip`.
@@ -123,11 +117,8 @@ The project follows a structured approach within the Jupyter Notebook:
 
 ## 📈 Results and Conclusion
 
-*(This is where you summarize your key findings from the notebook.)*
-
-- The best-performing model was the **[Your Best Model, e.g., Gradient Boosting Regressor]**.
-- It achieved an **R-squared score of [Your Score, e.g., 0.92]** on the test data, indicating that the model explains [e.g., 92%] of the variance in car sales.
-- The most influential factors in predicting `Units Sold` were **[List key features, e.g., Interest Rate (%) and Used Price ($)]**.
-- The analysis reveals a **[e.g., strong negative]** correlation between interest rates and units sold, confirming that as borrowing becomes more expensive, car sales tend to decrease.
+- The best-performing model was the **LinearRegression**.
+- The most influential factors in predicting **Units Sold** were **Used Price.**
+- The analysis reveals a **strong positive** correlation between interest rates and units sold, confirming that as borrowing becomes more expensive, car sales tend to decrease.
 
 In conclusion, the model demonstrates a strong capability to predict car sales based on the provided economic indicators, making it a potentially powerful tool for business forecasting.
