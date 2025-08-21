@@ -1,4 +1,4 @@
-## Car Sales Prediction Analysis
+# Car Sales Prediction Analysis
 
 This project aims to predict the number of car units sold based on key economic factors such as vehicle prices, inflation, and interest rates. The analysis uses historical data to build a predictive model, offering insights into the market dynamics of the automotive industry. The entire process, from data exploration to model evaluation, is detailed in the `Project_prediction.ipynb` Jupyter Notebook.
 
@@ -13,6 +13,7 @@ This project aims to predict the number of car units sold based on key economic 
 ## 📋 Table of Contents
 
 - [About the Project](#-about-the-project)
+- [Tech Stack](#-tech-stack)
 - [Dataset](#-dataset)
 - [Project Structure](#-project-structure)
 - [Getting Started](#-getting-started)
@@ -33,6 +34,16 @@ The primary objective is to build a machine learning model that can accurately f
 - **Correlation Analysis:** Identify the statistical relationship between economic indicators and sales figures.
 - **Predictive Modeling:** Develop and train a regression or time-series model to predict `Units Sold`.
 - **Feature Importance:** Determine which factors most significantly influence car sales.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Language:** ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)-   **Core Libraries:**
+  - **Data Manipulation:** ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+  - **Machine Learning:** ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+  - **Data Visualization:** ![Matplotlib](https://img.shields.io/badge/Matplotlib-3776AB?style=for-the-badge&logo=matplotlib&logoColor=white) & ![Seaborn](https://img.shields.io/badge/Seaborn-3776AB?style=for-the-badge&logo=seaborn&logoColor=white)
+- **Development Environment:** ![Jupyter Notebook](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
 
 ---
 
@@ -57,7 +68,7 @@ The analysis is based on the `prices.csv` dataset, which contains time-series da
 .
 ├── prices.csv                    # The raw dataset for the project
 ├── Project_prediction.ipynb      # Jupyter Notebook with all code and analysis
-├── sales_prediction_chart.png    # Example image file for the README
+├── output.png                    # Image file for the README visualization
 └── README.md                     # You are here!
 ```
 
@@ -110,15 +121,17 @@ The project follows a structured approach within the Jupyter Notebook:
    - Linear Regression
    - Random Forest Regressor
    - Gradient Boosting Machines
-   - Time-series models like ARIMA (if applicable)
 5. **Model Evaluation:** The models are evaluated on the test set using metrics like **Mean Absolute Error (MAE)**, **Root Mean Squared Error (RMSE)**, and **R-squared (R²)** to identify the best-performing model.
 
 ---
 
 ## 📈 Results and Conclusion
 
-- The best-performing model was the **LinearRegression**.
-- The most influential factors in predicting **Units Sold** were **Used Price.**
-- The analysis reveals a **strong positive** correlation between interest rates and units sold, confirming that as borrowing becomes more expensive, car sales tend to decrease.
+- The best-performing model was **Linear Regression**, which proved effective for this dataset.
+  - **R-squared (R²):** ` 0.8723459112450229`
+  - **Mean Absolute Error (MAE):** ` 4629.472856634064`
+  - **Root Mean Squared Error (RMSE):  `5629.228430441577`**
+- The most influential factors in predicting `Units Sold` were **Used Price ($)** and **Interest Rate (%)**.
+- The analysis reveals a **strong negative correlation** between interest rates and units sold, confirming the economic principle that as borrowing becomes more expensive, car sales tend to decrease.
 
-In conclusion, the model demonstrates a strong capability to predict car sales based on the provided economic indicators, making it a potentially powerful tool for business forecasting.
+In conclusion, the model demonstrates a strong capability to predict car sales based on the provided economic indicators. The performance of the Linear Regression model suggests that the relationships between these economic factors and car sales are largely linear, making it a simple yet powerful tool for business forecasting.
